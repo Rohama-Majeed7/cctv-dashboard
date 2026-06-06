@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Lock, CheckCircle2, XCircle, Save } from "lucide-react";
 import {
   Accordion,
@@ -80,7 +80,9 @@ const StatusBadge = ({ enabled }: { enabled: boolean }) => (
   const [targetCar, setTargetCar] = useState(true);
   const [targetBus, setTargetBus] = useState(true);
   const [targetTruck, setTargetTruck] = useState(true);
-
+useEffect(() => {
+  document.title = "CCTV System | System Configuration ";
+}, []);
   const handleSaveConfiguration = () => {
     // In a real application, this would save to settings.yaml
     alert("Configuration saved successfully!");

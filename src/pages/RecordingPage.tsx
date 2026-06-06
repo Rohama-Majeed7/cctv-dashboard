@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const mockRecordings = [
   { id: "EVT-001", timestamp: "2026-02-01 14:32:15", object: "Person", confidence: 94, duration: "12s" },
@@ -17,7 +17,9 @@ type TabType = "events" | "storage";
 
 export default function RecordingPage() {
   const [activeTab, setActiveTab] = useState<TabType>("events");
-
+useEffect(() => {
+  document.title = "CCTV System | Recorded Events ";
+}, []);
   return (
     <div className="min-h-screen bg-slate-950">
       <div className="mx-auto max-w-[1600px] px-3 py-4 sm:p-6">
