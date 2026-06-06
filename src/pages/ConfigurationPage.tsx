@@ -40,9 +40,9 @@ function ConfigurationPage() {
     useState("800");
   const [confidenceThreshold, setConfidenceThreshold] =
     useState("0.10");
-  const [iouThreshold, setIouThreshold] =
+  // const [iouThreshold, setIouThreshold] =
     useState("0.45");
-  const [inferenceInterval, setInferenceInterval] =
+  // const [inferenceInterval, setInferenceInterval] =
     useState("3");
   const [logLevel, setLogLevel] = useState("INFO");
 
@@ -67,8 +67,8 @@ function ConfigurationPage() {
 
   const [logToFile, setLogToFile] = useState(true);
 
-  const [boundingBoxes, setBoundingBoxes] =
-    useState(true);
+  // const [boundingBoxes, setBoundingBoxes] =
+    // useState(true);
 
   // Target classes
   const [targetPerson, setTargetPerson] =
